@@ -58,7 +58,7 @@
       { "id": 4, "typ": "Crit'Air Umweltplakette", "text": "Für die Einfahrt in Umweltzonen (die meisten Städte) ist eine Plakette obligatorisch. Nur auf der offiziellen Website bestellen: https://www.certificat-air.gouv.fr/", "ikona": "🍃" },
       { "id": 5, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
     ]
-}
+},
   "SK": {
     "sk": [
       { "id": 1, "typ": "Zákaz: Mimo Kempy", "text": "Prísny zákaz divokého kempovania v prírode a na parkoviskách.", "ikona": "🚫" },
@@ -598,6 +598,7 @@
     "LU": { "<= 3.5t": "free", "> 3.5t": "https://www.eurovignettes.eu/" }
   }
 }
+
 
 
 
