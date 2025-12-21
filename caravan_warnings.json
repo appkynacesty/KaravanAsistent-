@@ -357,6 +357,166 @@
       { "id": 2, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln for Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
     ]
   },
+  "CZ": {
+      "sk": [
+        { "id": 1, "typ": "Mýto a známka", "text": "Vozidlá do 3,5t potrebujú e-známku. Nad 3,5t sa platí mýto cez palubnú jednotku MytoCZ.", "ikona": "🛣️" },
+        { "id": 2, "typ": "Alkohol", "text": "V Česku platí nulová tolerancia alkoholu za volantom.", "ikona": "🍷" },
+        { "id": 3, "typ": "Reflexné vesty", "text": "Vesta je povinná pre každého, kto opúšťa vozidlo počas poruchy na ceste.", "ikona": "🦺" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Toll and Vignette", "text": "Vehicles up to 3.5t need an e-vignette. Over 3.5t require an on-board unit (MytoCZ).", "ikona": "🛣️" },
+        { "id": 2, "typ": "Alcohol", "text": "Zero tolerance for alcohol while driving.", "ikona": "🍷" },
+        { "id": 3, "typ": "Reflective Vests", "text": "A vest is mandatory for everyone leaving the vehicle during a breakdown.", "ikona": "🦺" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Maut und Vignette", "text": "Fahrzeuge bis 3,5t benötigen eine E-Vignette. Über 3,5t Maut über MytoCZ-Bordgerät.", "ikona": "🛣️" },
+        { "id": 2, "typ": "Alkohol", "text": "Null-Toleranz-Grenze für Alkohol am Steuer.", "ikona": "🍷" },
+        { "id": 3, "typ": "Warnwesten", "text": "Westenpflicht für jede Person, die das Fahrzeug bei einer Panne verlässt.", "ikona": "🦺" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "PT": {
+      "sk": [
+        { "id": 1, "typ": "Platba mýta", "text": "Mnoho diaľnic má výhradne elektronické mýto. Odporúča sa zariadenie Via Verde.", "ikona": "💳" },
+        { "id": 2, "typ": "Nocovanie", "text": "Divoké kempovanie je zakázané. Povolené je len na vyhradených miestach (AS) na max 48h.", "ikona": "🚫" },
+        { "id": 3, "typ": "Kamery", "text": "Používanie palubných kamier (dashcam) je v Portugalsku legálne šedá zóna, pozor na súkromie.", "ikona": "📷" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Toll Payment", "text": "Many highways have electronic-only tolls. Via Verde device is recommended.", "ikona": "💳" },
+        { "id": 2, "typ": "Camping", "text": "Wild camping is prohibited. Only allowed in designated areas (AS) for up to 48h.", "ikona": "🚫" },
+        { "id": 3, "typ": "Dashcams", "text": "The use of dashcams is a legal gray area; be mindful of privacy laws.", "ikona": "📷" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Mautzahlung", "text": "Viele Autobahnen haben nur elektronische Maut. Via Verde Gerät wird empfohlen.", "ikona": "💳" },
+        { "id": 2, "typ": "Camping", "text": "Wildcamping ist verboten. Nur auf ausgewiesenen Plätzen (AS) bis zu 48h erlaubt.", "ikona": "🚫" },
+        { "id": 3, "typ": "Dashcams", "text": "Dashcams sind eine rechtliche Grauzone; achten Sie auf den Datenschutz.", "ikona": "📷" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "RO": {
+      "sk": [
+        { "id": 1, "typ": "Rovinieta", "text": "Pre všetky kategórie vozidiel je povinná elektronická známka (Rovinieta).", "ikona": "🇷🇴" },
+        { "id": 2, "typ": "Stav ciest", "text": "Mimo hlavných ťahov môžu byť cesty v horšom stave. Pozor na túlavé zvieratá.", "ikona": "🐾" },
+        { "id": 3, "typ": "Hasiaci prístroj", "text": "Povinnou výbavou sú dva výstražné trojuholníky a hasiaci prístroj.", "ikona": "🧯" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Rovinieta", "text": "An electronic vignette (Rovinieta) is mandatory for all vehicle categories.", "ikona": "🇷🇴" },
+        { "id": 2, "typ": "Road Quality", "text": "Off main routes, road conditions can be poor. Watch out for stray animals.", "ikona": "🐾" },
+        { "id": 3, "typ": "Fire Extinguisher", "text": "Two warning triangles and a fire extinguisher are mandatory equipment.", "ikona": "🧯" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Rovinieta", "text": "Eine elektronische Vignette (Rovinieta) ist für alle Fahrzeugklassen obligatorisch.", "ikona": "🇷🇴" },
+        { "id": 2, "typ": "Straßenzustand", "text": "Abseits der Hauptstrecken teils schlechte Straßen. Vorsicht vor Streunern.", "ikona": "🐾" },
+        { "id": 3, "typ": "Feuerlöscher", "text": "Zwei Warndreiecke und ein Feuerlöscher sind Pflichtausstattung.", "ikona": "🧯" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "BG": {
+      "sk": [
+        { "id": 1, "typ": "E-Vignette", "text": "Pre všetky vozidlá do 3,5t je povinná e-známka. Nad 3,5t sa platí mýto (BG Toll).", "ikona": "🇧🇬" },
+        { "id": 2, "typ": "Svetlá", "text": "Celoročné svietenie stretávacími svetlami je povinné.", "ikona": "💡" },
+        { "id": 3, "typ": "Bezpečnosť", "text": "Odporúča sa parkovať na strážených parkoviskách alebo v kempoch.", "ikona": "🔒" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "E-Vignette", "text": "Mandatory for vehicles up to 3.5t. Over 3.5t require toll payment (BG Toll).", "ikona": "🇧🇬" },
+        { "id": 2, "typ": "Lights", "text": "Low beam headlights must be on year-round.", "ikona": "💡" },
+        { "id": 3, "typ": "Security", "text": "Parking in guarded parking lots or campsites is recommended.", "ikona": "🔒" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "E-Vignette", "text": "Pflicht für Fahrzeuge bis 3,5t. Über 3,5t zahlen Maut (BG Toll).", "ikona": "🇧🇬" },
+        { "id": 2, "typ": "Licht", "text": "Ganzjähriges Abblendlicht ist obligatorisch.", "ikona": "💡" },
+        { "id": 3, "typ": "Sicherheit", "text": "Es wird empfohlen, auf bewachten Parkplätzen oder Campingplätzen zu parken.", "ikona": "🔒" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "EE": {
+      "sk": [
+        { "id": 1, "typ": "Mýto pre nákladné", "text": "Vozidlá nad 3,5t platia cestný poplatok podľa času. Do 3,5t je jazda zdarma.", "ikona": "🇪🇪" },
+        { "id": 2, "typ": "Príroda", "text": "Kempovanie v štátnych lesoch (RMK) je povolené na určených bezplatných miestach.", "ikona": "🌲" },
+        { "id": 3, "typ": "Zver", "text": "Vysoké riziko kolízie s losmi, najmä za úsvitu a súmraku.", "ikona": "🦌" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Road User Charge", "text": "Vehicles over 3.5t pay a time-based fee. Under 3.5t is free of charge.", "ikona": "🇪🇪" },
+        { "id": 2, "typ": "Nature", "text": "Camping in state forests (RMK) is allowed at designated free locations.", "ikona": "🌲" },
+        { "id": 3, "typ": "Wildlife", "text": "High risk of moose collisions, especially at dawn and dusk.", "ikona": "🦌" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Straßengebühr", "text": "Fahrzeuge über 3,5t zahlen eine zeitbasierte Gebühr. Unter 3,5t ist kostenlos.", "ikona": "🇪🇪" },
+        { "id": 2, "typ": "Natur", "text": "Camping in Staatsforsten (RMK) ist an ausgewiesenen kostenlosen Plätzen erlaubt.", "ikona": "🌲" },
+        { "id": 3, "typ": "Wildtiere", "text": "Hohes Risiko von Elchkollisionen, besonders in der Dämmerung.", "ikona": "🦌" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "LV": {
+      "sk": [
+        { "id": 1, "typ": "Eurovignette", "text": "Povinná pre vozidlá nad 3,0t na hlavných ťahoch. Do 3t je zdarma.", "ikona": "🇱🇻" },
+        { "id": 2, "typ": "Jūrmala", "text": "Vjazd do oblasti Jūrmala je v sezóne spoplatnený špeciálnym poplatkom.", "ikona": "🏖️" },
+        { "id": 3, "typ": "Pneumatiky", "text": "Zimné pneumatiky sú povinné od 1. decembra do 1. marca.", "ikona": "❄️" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Eurovignette", "text": "Mandatory for vehicles over 3.0t on main roads. Under 3t is free.", "ikona": "🇱🇻" },
+        { "id": 2, "typ": "Jūrmala", "text": "Entry to the Jūrmala area requires a special fee during the season.", "ikona": "🏖️" },
+        { "id": 3, "typ": "Tires", "text": "Winter tires are mandatory from December 1st to March 1st.", "ikona": "❄️" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Eurovignette", "text": "Pflicht für Fahrzeuge über 3,0t auf Hauptstraßen. Unter 3t kostenlos.", "ikona": "🇱🇻" },
+        { "id": 2, "typ": "Jūrmala", "text": "Die Einfahrt in das Jūrmala-Gebiet ist in der Saison gebührenpflichtig.", "ikona": "🏖️" },
+        { "id": 3, "typ": "Reifen", "text": "Winterreifenpflicht vom 1. Dezember bis zum 1. März.", "ikona": "❄️" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "LT": {
+      "sk": [
+        { "id": 1, "typ": "Vinjetė", "text": "Vozidlá nad 3,5t (kategórie M2, M3, N1-N3) musia mať e-známku.", "ikona": "🇱🇹" },
+        { "id": 2, "typ": "Piesočné duny", "text": "Na Kurskej kose platia prísne pravidlá pre pohyb vozidiel a mýto za vjazd.", "ikona": "🏜️" },
+        { "id": 3, "typ": "Dashcam", "text": "Palubné kamery sú povolené, ale zverejňovanie záznamu s tvárami je nelegálne.", "ikona": "🎞️" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Vignette", "text": "Vehicles over 3.5t (cats M2, M3, N1-N3) must have an e-vignette.", "ikona": "🇱🇹" },
+        { "id": 2, "typ": "Sand Dunes", "text": "Strict vehicle rules and entry tolls apply on the Curonian Spit.", "ikona": "🏜️" },
+        { "id": 3, "typ": "Dashcam", "text": "Dashcams are allowed, but publishing footage with visible faces is illegal.", "ikona": "🎞️" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Vignette", "text": "Fahrzeuge über 3,5t (Kat. M2, M3, N1-N3) benötigen eine E-Vignette.", "ikona": "🇱🇹" },
+        { "id": 2, "typ": "Sanddünen", "text": "Auf der Kurischen Nehrung gelten strenge Regeln und eine Einfahrtsgebühr.", "ikona": "🏜️" },
+        { "id": 3, "typ": "Dashcam", "text": "Dashcams sind erlaubt, die Veröffentlichung von Gesichtern jedoch illegal.", "ikona": "🎞️" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
+    "LU": {
+      "sk": [
+        { "id": 1, "typ": "Bezplatné cesty", "text": "Diaľnice v Luxemburgu sú pre vozidlá do 12t bezplatné.", "ikona": "🇱🇺" },
+        { "id": 2, "typ": "Palivo", "text": "Ceny palív sú tu často nižšie ako v okolitých štátoch. Čerpacie stanice sú vyťažené.", "ikona": "⛽" },
+        { "id": 3, "typ": "Parkovanie", "text": "Parkovanie s karavanom v meste Luxembourg je veľmi obmedzené, odporúča sa P+R.", "ikona": "🅿️" },
+        { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      ],
+      "en": [
+        { "id": 1, "typ": "Free Roads", "text": "Highways in Luxembourg are free of charge for vehicles under 12t.", "ikona": "🇱🇺" },
+        { "id": 2, "typ": "Fuel", "text": "Fuel prices are often lower than in neighboring countries. Gas stations are busy.", "ikona": "⛽" },
+        { "id": 3, "typ": "Parking", "text": "Caravan parking in Luxembourg City is very limited; use P+R lots.", "ikona": "🅿️" },
+        { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      ],
+      "de": [
+        { "id": 1, "typ": "Gebührenfrei", "text": "Autobahnen in Luxemburg sind für Fahrzeuge unter 12t kostenlos.", "ikona": "🇱🇺" },
+        { "id": 2, "typ": "Tanken", "text": "Spritpreise oft niedriger als im Umland. Tankstellen meist sehr voll.", "ikona": "⛽" },
+        { "id": 3, "typ": "Parken", "text": "Wohnmobilparken in Luxemburg-Stadt ist begrenzt; nutzen Sie P+R.", "ikona": "🅿️" },
+        { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      ]
+    },
 
   "speedLimits": {
     "SK": { "country": "Slovensko", "<= 3.5t": { "town": 50, "outskirts": 90, "expressway": 100, "highway": 110 }, "> 3.5t": { "town": 50, "outskirts": 90, "expressway": 90, "highway": 90 } },
@@ -421,7 +581,16 @@
     "SRB": { "<= 3.5t": "https://putevi-srbije.rs/index.php/en/", "> 3.5t": "https://putevi-srbije.rs/index.php/en/" },
     "BiH": { "<= 3.5t": "https://www.jpautoceste.ba/en/toll-collection-system", "> 3.5t": "https://www.jpautoceste.ba/en/toll-collection-system" },
     "MNE": { "<= 3.5t": "https://www.autoput.me/en", "> 3.5t": "https://www.autoput.me/en" },
-    "ALB": { "<= 3.5t": "https://www.autostradatirana.al/en/", "> 3.5t": "https://www.autostradatirana.al/en/" }
+    "ALB": { "<= 3.5t": "https://www.autostradatirana.al/en/", "> 3.5t": "https://www.autostradatirana.al/en/" },
+    "CZ": { "<= 3.5t": "https://edalnice.cz/", "> 3.5t": "https://mytocz.eu/" },
+    "PT": { "<= 3.5t": "https://www.portugaltolls.com/", "> 3.5t": "https://www.viaverde.pt/" },
+    "RO": { "<= 3.5t": "https://www.roviniete.ro/sk", "> 3.5t": "https://www.roviniete.ro/sk" },
+    "BG": { "<= 3.5t": "https://www.bgtoll.bg/sk/", "> 3.5t": "https://www.bgtoll.bg/sk/" },
+    "EE": { "<= 3.5t": "free", "> 3.5t": "https://www.roadtoll.ee/en" },
+    "LV": { "<= 3.5t": "free", "> 3.5t": "https://www.lvvignette.eu/" },
+    "LT": { "<= 3.5t": "free", "> 3.5t": "https://pirkti.keliumokestis.lt/" },
+    "LU": { "<= 3.5t": "free", "> 3.5t": "https://www.eurovignettes.eu/" }
   }
 }
+
 
