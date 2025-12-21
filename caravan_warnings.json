@@ -127,29 +127,38 @@
   "FI": {
     "sk": [
       { "id": 1, "typ": "Everyman's Right: Povolené", "text": "Krátkodobé nocovanie na nezastavaných pozemkoch mimo obydlí je povolené.", "ikona": "🌲" },
-      { "id": 2, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Bezpečnosť a výbava", "text": "Stretávacie svetlá sú povinné celoročne. Zimné pneumatiky sú povinné od 1.11. do 31.3., ak je na cestách sneh alebo poľadovica.", "ikona": "❄️" },
+      { "id": 3, "typ": "Pozor na zver", "text": "V severných oblastiach hrozí vysoké riziko kolízie so sobmi a losmi, najmä za súmraku.", "ikona": "🦌" },
+      { "id": 4, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
     ],
     "en": [
       { "id": 1, "typ": "Everyman's Right: Allowed", "text": "Short-term overnight stays on undeveloped land away from houses are allowed.", "ikona": "🌲" },
-      { "id": 2, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Safety & Equipment", "text": "Headlights are mandatory year-round. Winter tires are mandatory from Nov 1st to March 31st if road conditions require them.", "ikona": "❄️" },
+      { "id": 3, "typ": "Wildlife Warning", "text": "High risk of collisions with reindeer and moose in northern areas, especially at twilight.", "ikona": "🦌" },
+      { "id": 4, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
     ],
     "de": [
       { "id": 1, "typ": "Jedermannsrecht: Erlaubt", "text": "Kurzzeitiges Übernachten auf unbebautem Land fernab von Häusern ist erlaubt.", "ikona": "🌲" },
-      { "id": 2, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Sicherheit & Ausrüstung", "text": "Abblendlicht ist ganzjährig Pflicht. Winterreifen sind vom 1.11. bis 31.3. obligatorisch, wenn es die Straßenverhältnisse erfordern.", "ikona": "❄️" },
+      { "id": 3, "typ": "Wildwechsel", "text": "Erhöhtes Risiko von Kollisionen mit Rentieren und Elchen in nördlichen Regionen, besonders in der Dämmerung.", "ikona": "🦌" },
+      { "id": 4, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
     ]
   },
   "SE": {
     "sk": [
       { "id": 1, "typ": "Allemansrätten: Povolené", "text": "Povolené na 24h mimo súkromných pozemkov. Iba státie, nie kempovanie.", "ikona": "🏕️" },
-      { "id": 2, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Mosty a mestské mýto", "text": "Mosty (Motala, Sundsvall) a mestá (Štokholm, Göteborg) sa platia spätne. Odporúčaná registrácia: https://www.epass24.com", "ikona": "🌉" },
+      { "id": 3, "typ": "Upozornenie", "text": "Tieto limity sú orientačné a nastavené podľa prísnejších pravidiel pre súpravy. Vždy sledujte lokálne dopravné značenie a technické limity vášho vozidla.", "ikona": "⚠️" }
     ],
     "en": [
       { "id": 1, "typ": "Allemansrätten: Allowed", "text": "Allowed for 24h outside private property. Only staying, no camping equipment.", "ikona": "🏕️" },
-      { "id": 2, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Bridges & Congestion Tax", "text": "Bridges (Motala, Sundsvall) and cities (Stockholm, Gothenburg) use automatic billing. Register at: https://www.epass24.com", "ikona": "🌉" },
+      { "id": 3, "typ": "Notice", "text": "These limits are indicative and based on stricter rules for vehicle combinations. Always follow local traffic signs and your vehicle's technical limits.", "ikona": "⚠️" }
     ],
     "de": [
       { "id": 1, "typ": "Allemansrätten: Erlaubt", "text": "24h außerhalb von Privatgrundstücken erlaubt. Nur Stehen, kein Campingverhalten.", "ikona": "🏕️" },
-      { "id": 2, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
+      { "id": 2, "typ": "Brücken & City-Maut", "text": "Brücken (Motala, Sundsvall) und Städte (Stockholm, Göteborg) werden automatisch abgerechnet. Registrierung: https://www.epass24.com", "ikona": "🌉" },
+      { "id": 3, "typ": "Hinweis", "text": "Diese Limits sind Richtwerte und nach strengeren Regeln für Gespanne festgelegt. Beachten Sie immer die lokale Beschilderung und die technischen Limits Ihres Fahrzeugs.", "ikona": "⚠️" }
     ]
   },
   "NO": {
@@ -598,6 +607,7 @@
   "LU": { "<= 3.5t": "free", "> 3.5t": "https://www.eurovignettes.eu" }
   }
 }
+
 
 
 
