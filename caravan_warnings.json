@@ -572,7 +572,7 @@
     "FR": { "<= 3.5t": "https://www.sanef.com", "> 3.5t": "https://www.sanef.com" },
     "IT": { "<= 3.5t": "https://www.autostrade.it/en/home", "> 3.5t": "https://www.autostrade.it/en/home" },
     "PL": { "<= 3.5t": "https://etoll.gov.pl/en/", "> 3.5t": "https://etoll.gov.pl/en/" },
-    "FI": { "<= 3.5t": "https://vayla.fi/en/web/en/highways", "> 3.5t": "https://vayla.fi/en/web/en/highways" },
+    "FI": { "<= 3.5t": "www.free.eu", "> 3.5t": "www.free.eu" },
     "SE": { "<= 3.5t": "https://www.transportstyrelsen.se/en/road/tolls-and-fees/", "> 3.5t": "https://www.transportstyrelsen.se/en/road/tolls-and-fees/" },
     "NO": { "<= 3.5t": "https://www.autopass.no/en/", "> 3.5t": "https://www.autopass.no/en/" },
     "IS": { "<= 3.5t": "https://www.vegagerdin.is/english", "> 3.5t": "https://www.vegagerdin.is/english" },
@@ -598,6 +598,7 @@
     "LU": { "<= 3.5t": "free", "> 3.5t": "https://www.eurovignettes.eu/" }
   }
 }
+
 
 
 
