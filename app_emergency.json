@@ -37,6 +37,17 @@
               },
               "url": "https://www.karavanservis.sk",
               "phone": "+421900111222"
+            },
+            {
+              "name": {
+                "sk": "Caravan Metropol (Wien)",
+                "en": "Caravan Metropol (Vienna)",
+                "de": "Caravan Metropol (Wien)"
+              },
+              "isPartner": false,
+              "country": "AT",
+              "url": "https://www.caravan-metropol.at",
+              "phone": "+43123456789"
             }
           ]
         }
@@ -64,14 +75,61 @@
           "items": [
             {
               "name": {
-                "sk": "Park4Night",
-                "en": "Park4Night",
-                "de": "Park4Night"
+                "sk": "Park4Night (Aplikácia)",
+                "en": "Park4Night (App)",
+                "de": "Park4Night (App)"
               },
               "isPartner": false,
               "country": "ALL",
               "url": "https://park4night.com",
               "phone": ""
+            },
+            {
+              "name": {
+                "sk": "Bezkempu.cz",
+                "en": "Bezkempu.cz",
+                "de": "Bezkempu.cz"
+              },
+              "isPartner": false,
+              "country": "CZ",
+              "url": "https://www.bezkempu.cz",
+              "phone": ""
+            }
+          ]
+        },
+        {
+          "heading": {
+            "sk": "Pomoc v núdzi",
+            "en": "Emergency Help",
+            "de": "Notfallhilfe"
+          },
+          "content": {
+            "sk": "Dôležité odkazy pre neočakávané situácie na cestách.",
+            "en": "Important links for unexpected situations on the road.",
+            "de": "Wichtige Links für unerwartete Situationen unterwegs."
+          },
+          "items": [
+            {
+              "name": {
+                "sk": "E-Asistenčná karta (SKP)",
+                "en": "E-Assistance Card (SKP)",
+                "de": "E-Assistance Karte (SKP)"
+              },
+              "isPartner": false,
+              "country": "SK",
+              "url": "https://www.skp.sk",
+              "phone": ""
+            },
+            {
+              "name": {
+                "sk": "ÖAMTC (Rakúsky autoklub)",
+                "en": "ÖAMTC (Austrian Car Club)",
+                "de": "ÖAMTC (Der Mobilitätsclub)"
+              },
+              "isPartner": false,
+              "country": "AT",
+              "url": "https://www.oeamtc.at",
+              "phone": "120"
             }
           ]
         }
@@ -92,9 +150,9 @@
             "de": "Vergünstigte Campingplätze"
           },
           "content": {
-            "sk": "Preukážte sa aktívnym profilom v aplikácii Karavan Asistent a čerpajte tieto výhody.",
-            "en": "Show your active profile in the Karavan Asistent app and enjoy these benefits.",
-            "de": "Zeigen Sie Ihr aktives Profil in der Karavan Asistent App und genießen Sie diese Vorteile."
+            "sk": "Kempy, kde vám Karavan Asistent otvorí nové možnosti.",
+            "en": "Campsites where Karavan Asistent opens new possibilities.",
+            "de": "Campingplätze, auf denen Karavan Asistent neue Möglichkeiten eröffnet."
           },
           "items": [
             {
@@ -107,27 +165,11 @@
               "country": "SK",
               "benefit": {
                 "sk": "Zľava 10% na ubytovanie (mimo sezóny)",
-                "en": "10% discount on accommodation (off-season)",
+                "en": "10% discount on stay (off-season)",
                 "de": "10% Rabatt auf Unterkunft (Nebensaison)"
               },
               "url": "https://www.maracamping.sk",
               "phone": "+421911122333"
-            },
-            {
-              "name": {
-                "sk": "Camping Belá - Nižné Kamence",
-                "en": "Camping Belá",
-                "de": "Camping Belá"
-              },
-              "isPartner": true,
-              "country": "SK",
-              "benefit": {
-                "sk": "Káva alebo čaj k pobytu zdarma",
-                "en": "Free coffee or tea during your stay",
-                "de": "Kostenloser Kaffee oder Tee während Ihres Aufenthalts"
-              },
-              "url": "http://www.campingbela.eu",
-              "phone": "+421904123456"
             },
             {
               "name": {
@@ -138,9 +180,9 @@
               "isPartner": true,
               "country": "AT",
               "benefit": {
-                "sk": "3 noci za cenu 2 (v júni)",
-                "en": "3 nights for the price of 2 (in June)",
-                "de": "3 Nächte zum Preis von 2 (im Juni)"
+                "sk": "Káva alebo čaj k pobytu zdarma",
+                "en": "Free coffee or tea during your stay",
+                "de": "Kostenloser Kaffee oder Tee während Ihres Aufenthalts"
               },
               "url": "https://www.camping-am-see.at",
               "phone": "+43111222333"
