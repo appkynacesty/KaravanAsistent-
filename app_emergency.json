@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.3.0",
   "lastUpdated": "2025-12-24",
   "modules": [
     {
@@ -12,26 +12,34 @@
       "sections": [
         {
           "heading": {
-            "sk": "Špecializované Karavan Servisy",
-            "en": "Specialized Caravan Services",
-            "de": "Spezialisierte Wohnmobil-Werkstätten"
+            "sk": "Servis a doplnky",
+            "en": "Service and accessories",
+            "de": "Service und Zubehör"
           },
           "content": {
-            "sk": "Tu nájdete zoznam overených servisov pre váš karavan alebo obytné auto.",
-            "en": "Here you can find a list of verified services for your caravan or motorhome.",
-            "de": "Hier finden Sie eine Liste verifizierter Werkstätten für Ihr Wohnmobil."
+            "sk": "Zoznam overených servisov, predajcov náhradných dielov a kempingových doplnkov.",
+            "en": "List of verified services, spare parts dealers and camping accessories.",
+            "de": "Liste verifizierter Werkstätten, Ersatzteilhändler und Campingzubehör."
           },
           "items": [
             {
-              "name": "Karavan Servis ABC (Partner)",
+              "name": {
+                "sk": "Karavan Servis ABC (Partner)",
+                "en": "Caravan Service ABC (Partner)",
+                "de": "Wohnmobil Service ABC (Partner)"
+              },
               "isPartner": true,
               "url": "https://www.priklad-servis.sk",
               "phone": "+421900111222"
             },
             {
-              "name": "E-shop s náhradnými dielmi XYZ",
+              "name": {
+                "sk": "E-shop KempingSvet",
+                "en": "E-shop CampingWorld",
+                "de": "E-Shop CampingWelt"
+              },
               "isPartner": false,
-              "url": "https://www.priklad-diely.sk",
+              "url": "https://www.kempingsvet.sk",
               "phone": ""
             }
           ]
@@ -48,21 +56,123 @@
       "sections": [
         {
           "heading": {
-            "sk": "Požičovne a Príslušenstvo",
-            "en": "Rentals and Accessories",
-            "de": "Vermieter und Zubehör"
+            "sk": "Vyhľadávanie kempov",
+            "en": "Camp Search",
+            "de": "Campingplatzsuche"
           },
           "content": {
-            "sk": "Vybavenie pre kemping a voľný čas od našich partnerov.",
-            "en": "Camping and leisure equipment from our partners.",
-            "de": "Camping- und Freizeitausrüstung von unseren Partnern."
+            "sk": "Najlepšie aplikácie a weby na hľadanie miesta pre váš nocľah.",
+            "en": "Best apps and websites to find a place to stay.",
+            "de": "Beste Apps und Websites, um eine Unterkunft zu finden."
           },
           "items": [
             {
-              "name": "Kemping Svet",
-              "isPartner": true,
-              "url": "https://www.kempingsvet.sk",
+              "name": {
+                "sk": "Park4Night (Aplikácia)",
+                "en": "Park4Night (App)",
+                "de": "Park4Night (App)"
+              },
+              "isPartner": false,
+              "url": "https://park4night.com",
               "phone": ""
+            },
+            {
+              "name": {
+                "sk": "Stellplatz.sk",
+                "en": "Stellplatz.sk",
+                "de": "Stellplatz.sk"
+              },
+              "isPartner": false,
+              "url": "https://www.stellplatz.sk",
+              "phone": ""
+            }
+          ]
+        },
+        {
+          "heading": {
+            "sk": "Pomoc v núdzi",
+            "en": "Emergency Help",
+            "de": "Notfallhilfe"
+          },
+          "content": {
+            "sk": "Dôležité odkazy pre neočakávané situácie na cestách.",
+            "en": "Important links for unexpected situations on the road.",
+            "de": "Wichtige Links für unerwartete Situationen unterwegs."
+          },
+          "items": [
+            {
+              "name": {
+                "sk": "E-Asistenčná karta (SKP)",
+                "en": "E-Assistance Card (SKP)",
+                "de": "E-Assistance Karte (SKP)"
+              },
+              "isPartner": false,
+              "url": "https://www.skp.sk",
+              "phone": ""
+            },
+            {
+              "name": {
+                "sk": "Zjazdnosť ciest - SSC",
+                "en": "Road Conditions - SSC",
+                "de": "Straßenzustand - SSC"
+              },
+              "isPartner": false,
+              "url": "https://www.zjazdnost.sk",
+              "phone": ""
+            },
+            {
+              "name": {
+                "sk": "Ceny palív v Európe",
+                "en": "Fuel Prices in Europe",
+                "de": "Kraftstoffpreise in Europa"
+              },
+              "isPartner": false,
+              "url": "https://www.tcs.ch/de/camping-reisen/reiseinfos/benzinpreise-europa.php",
+              "phone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "traffic",
+      "title": {
+        "sk": "Partnerské Kempy",
+        "en": "Partner Campsites",
+        "de": "Partner-Campingplätze"
+      },
+      "sections": [
+        {
+          "heading": {
+            "sk": "Zvýhodnené kempy",
+            "en": "Discounted Campsites",
+            "de": "Vergünstigte Campingplätze"
+          },
+          "content": {
+            "sk": "Kempy, kde vám Karavan Asistent otvorí nové možnosti. Preukážte sa aktívnym predplatným a čerpajte výhody.",
+            "en": "Campsites where Karavan Asistent opens new possibilities. Show your active subscription and get benefits.",
+            "de": "Campingplätze, auf denen Karavan Asistent neue Möglichkeiten eröffnet. Zeigen Sie Ihr aktives Abonnement und nutzen Sie Vorteile."
+          },
+          "items": [
+            {
+              "name": {
+                "sk": "Mara Camping (Liptov)",
+                "en": "Mara Camping (Liptov)",
+                "de": "Mara Camping (Liptov)"
+              },
+              "isPartner": true,
+              "url": "https://www.maracamping.sk",
+              "phone": "+421911122333"
+            },
+            {
+              "name": {
+                "sk": "Camping Belá - Nižné Kamence",
+                "en": "Camping Belá",
+                "de": "Camping Belá"
+              },
+              "isPartner": true,
+              "url": "http://www.campingbela.eu",
+              "phone": "+421904123456"
             }
           ]
         }
