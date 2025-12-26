@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Admin - Výstrahy a Limity</title>
+    <title>Admin - Výstrahy a Limity (Full)</title>
     <style>
         body { font-family: -apple-system, system-ui, sans-serif; max-width: 900px; margin: 10px auto; padding: 15px; background: #fff5f5; color: #333; }
         .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h2 { margin-top: 0; color: #dc3545; font-size: 1.2em; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; display: flex; justify-content: space-between; }
+        h2 { margin-top: 0; color: #dc3545; font-size: 1.2em; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; }
         label { font-weight: bold; font-size: 0.85em; display: block; margin-top: 15px; color: #555; }
         input, select, textarea { width: 100%; margin: 5px 0 10px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
         .row { display: flex; gap: 10px; }
-        .speed-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; background: #f9f9f9; padding: 10px; border-radius: 8px; }
+        .speed-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; background: #f9f9f9; padding: 10px; border-radius: 8px; }
         button { padding: 14px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s; -webkit-appearance: none; }
         .btn-add { background: #dc3545; color: white; width: 100%; margin-top: 20px; font-size: 1.1em; }
         .btn-load { background: #6c757d; color: white; margin-bottom: 15px; width: 100%; }
-        .item-row { padding: 12px; border-bottom: 1px solid #eee; }
+        .item-row { padding: 12px; border-bottom: 1px solid #eee; position: relative; }
         .token-area { background: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
         #status { padding: 15px; margin-top: 10px; border-radius: 8px; display: none; text-align: center; font-weight: bold; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; min-width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        .country-header { background: #343a40; color: white; padding: 8px 15px; border-radius: 5px; margin-top: 20px; font-weight: bold; display: flex; justify-content: space-between; }
+        .country-header { background: #343a40; color: white; padding: 8px 15px; border-radius: 5px; margin-top: 20px; font-weight: bold; }
         .warning-box { border-left: 4px solid #dc3545; background: #fff9f9; padding: 10px; margin: 5px 0; font-size: 0.9em; }
-        .btn-delete { background: #ff4d4d; color: white; border-radius: 5px; padding: 5px 10px; font-size: 0.7em; }
-        .limit-info { font-size: 0.8em; color: #666; padding: 5px 15px; border-bottom: 2px solid #eee; }
+        .btn-delete { background: #ff4d4d; color: white; border-radius: 5px; padding: 5px 10px; font-size: 0.7em; float: right; }
+        .limit-info { font-size: 0.8em; color: #666; padding: 8px; background: #eee; margin-bottom: 10px; border-radius: 0 0 8px 8px; }
+        .lang-tag { font-size: 0.7em; background: #ddd; padding: 2px 4px; border-radius: 3px; margin-right: 5px; }
     </style>
 </head>
 <body>
@@ -36,53 +37,54 @@
 <div class="card">
     <h2>➕ Pridať Varovanie</h2>
     <form id="warningForm">
-        <label>Kód krajiny (AT, DE, SK...):</label>
+        <label>Krajina (Kód napr. AT, DE, SK):</label>
         <input type="text" id="wCountry" placeholder="AT" required maxlength="2" style="text-transform: uppercase;">
 
         <div class="row">
             <div style="flex:1"><label>Ikona:</label><input type="text" id="wIcon" placeholder="🚫" required></div>
             <div style="flex:3"><label>Typ (SK):</label><input type="text" id="wType_sk" placeholder="Nocovanie" required></div>
         </div>
+        <textarea id="wText_sk" rows="2" placeholder="Text varovania (Slovensky)" required></textarea>
 
-        <label>Text (SK):</label>
-        <textarea id="wText_sk" rows="2" required></textarea>
+        <label>Preklady (Ak prázdne, použije sa SK text):</label>
+        <input type="text" id="wType_en" placeholder="Type (English)">
+        <textarea id="wText_en" rows="2" placeholder="Text (English)"></textarea>
         
-        <small style="color:#888">Ostatné jazyky sa doplnia automaticky, ak ich nevyplníte.</small>
+        <input type="text" id="wType_de" placeholder="Typ (Deutsch)">
+        <textarea id="wText_de" rows="2" placeholder="Text (Deutsch)"></textarea>
+
         <button type="submit" class="btn-add">⚠️ Pridať varovanie</button>
     </form>
 </div>
 
 <div class="card">
-    <h2>⚡ Nastaviť Rýchlostné limity</h2>
+    <h2>⚡ Rýchlostné limity</h2>
     <form id="limitForm">
         <div class="row">
-            <div style="flex:1"><label>Kód (AT):</label><input type="text" id="lCode" placeholder="AT" required maxlength="2" style="text-transform: uppercase;"></div>
-            <div style="flex:2"><label>Názov (Rakúsko):</label><input type="text" id="lName" placeholder="Rakúsko" required></div>
+            <div style="flex:1"><label>Kód:</label><input type="text" id="lCode" placeholder="AT" required maxlength="2" style="text-transform: uppercase;"></div>
+            <div style="flex:2"><label>Názov krajiny:</label><input type="text" id="lName" placeholder="Rakúsko" required></div>
         </div>
-
-        <label>Do 3.5t (Obec / Mimo / Rýchlo / Diaľnica):</label>
+        <label>Limity ≤ 3.5t (Obec/Mimo/Rýchlo/Diaľnica):</label>
         <div class="speed-grid">
             <input type="number" id="l1_t" placeholder="50" required>
             <input type="number" id="l1_o" placeholder="100" required>
             <input type="number" id="l1_e" placeholder="100" required>
             <input type="number" id="l1_h" placeholder="130" required>
         </div>
-
-        <label>Nad 3.5t / Súprava:</label>
+        <label>Limity > 3.5t / Súprava:</label>
         <div class="speed-grid">
             <input type="number" id="l2_t" placeholder="50" required>
             <input type="number" id="l2_o" placeholder="80" required>
             <input type="number" id="l2_e" placeholder="80" required>
             <input type="number" id="l2_h" placeholder="80" required>
         </div>
-
-        <button type="submit" class="btn-add" style="background:#007bff">💾 Uložiť limity pre krajinu</button>
+        <button type="submit" class="btn-add" style="background:#007bff">💾 Uložiť limity</button>
     </form>
 </div>
 
 <div class="card">
-    <h2>📋 Prehľad dát</h2>
-    <button class="btn-load" onclick="loadAll()">🔄 Načítať zoznam z GitHubu</button>
+    <h2>📋 Aktuálny obsah</h2>
+    <button class="btn-load" onclick="loadAll()">🔄 Načítať zoznam</button>
     <div id="masterList"></div>
 </div>
 
@@ -101,80 +103,83 @@
             const res = await fetch(getUrl(), { headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json' } });
             const data = await res.json();
             return { content: JSON.parse(decodeURIComponent(escape(window.atob(data.content)))), sha: data.sha };
-        } catch (e) { alert("Chyba načítania!"); return null; }
+        } catch (e) { alert("Chyba!"); return null; }
     }
 
     async function loadAll() {
         const listDiv = document.getElementById('masterList');
-        listDiv.innerHTML = "⌛ Načítavam...";
+        listDiv.innerHTML = "⌛...";
         const data = await getGitHubData();
-        if (!data) { listDiv.innerHTML = ""; return; }
+        if (!data) return;
 
         listDiv.innerHTML = "";
-        const countries = Object.keys(data.content).filter(k => k !== "speedLimits" && k !== "vignetteLinks");
+        const codes = Object.keys(data.content).filter(k => k !== "speedLimits" && k !== "vignetteLinks");
 
-        countries.forEach(code => {
+        codes.forEach(code => {
             const limits = data.content.speedLimits[code];
-            const countrySection = document.createElement('div');
+            const sec = document.createElement('div');
+            sec.innerHTML = `<div class="country-header">${code} - ${limits ? limits.country : ''}</div>`;
             
-            countrySection.innerHTML = `
-                <div class="country-header">
-                    <span>${code} - ${limits ? limits.country : 'Neznáma'}</span>
-                </div>
-                ${limits ? `
-                <div class="limit-info">
-                    🚗 <strong>≤3.5t:</strong> ${limits["<= 3.5t"].town}/${limits["<= 3.5t"].outskirts}/${limits["<= 3.5t"].expressway}/${limits["<= 3.5t"].highway} | 
-                    🚛 <strong>>3.5t:</strong> ${limits["> 3.5t"].town}/${limits["> 3.5t"].outskirts}/${limits["> 3.5t"].expressway}/${limits["> 3.5t"].highway}
-                </div>` : ''}
-            `;
+            if(limits) {
+                sec.innerHTML += `<div class="limit-info">🚗 ${limits["<= 3.5t"].town}/${limits["<= 3.5t"].outskirts}/${limits["<= 3.5t"].expressway}/${limits["<= 3.5t"].highway} | 🚛 ${limits["> 3.5t"].town}/${limits["> 3.5t"].outskirts}/${limits["> 3.5t"].expressway}/${limits["> 3.5t"].highway}</div>`;
+            }
 
-            data.content[code].sk.forEach((item, index) => {
+            data.content[code].sk.forEach((item, idx) => {
                 const row = document.createElement('div');
                 row.className = 'item-row';
                 row.innerHTML = `
+                    <button class="btn-delete" onclick="deleteWarning('${code}', ${idx})">Zmazať</button>
                     <div class="warning-box">
-                        <button class="btn-delete" style="float:right" onclick="deleteWarning('${code}', ${index})">Zmazať</button>
                         ${item.ikona} <strong>${item.typ}</strong><br>${item.text}
                     </div>
                 `;
-                countrySection.appendChild(row);
+                sec.appendChild(row);
             });
-            listDiv.appendChild(countrySection);
+            listDiv.appendChild(sec);
         });
-        showStatus("✅ Dáta zobrazené", "#d4edda", "#155724");
     }
 
-    // FORMULÁR VAROVANIA
     document.getElementById('warningForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const code = document.getElementById('wCountry').value.toUpperCase();
-        showStatus("🚀 Zapisujem...", "#007bff", "white");
         const data = await getGitHubData();
         if (!data) return;
 
         if (!data.content[code]) data.content[code] = { sk: [], en: [], de: [] };
-        
-        const newItem = {
-            id: data.content[code].sk.length + 1,
-            typ: document.getElementById('wType_sk').value,
-            text: document.getElementById('wText_sk').value,
-            ikona: document.getElementById('wIcon').value
-        };
 
-        ["sk", "en", "de"].forEach(lang => data.content[code][lang].push(newItem));
+        const id = data.content[code].sk.length + 1;
+        const ikona = document.getElementById('wIcon').value;
+        const sk_typ = document.getElementById('wType_sk').value;
+        const sk_text = document.getElementById('wText_sk').value;
 
-        if (await saveToGitHub(data.content, data.sha, `Nové varovanie ${code}`)) {
-            showStatus("✅ Uložené!", "#28a745", "white");
+        // Pridanie do SK
+        data.content[code].sk.push({ id, typ: sk_typ, text: sk_text, ikona });
+
+        // Pridanie do EN (použije EN vstup alebo SK zálohu)
+        data.content[code].en.push({
+            id,
+            typ: document.getElementById('wType_en').value || sk_typ,
+            text: document.getElementById('wText_en').value || sk_text,
+            ikona
+        });
+
+        // Pridanie do DE (použije DE vstup alebo SK zálohu)
+        data.content[code].de.push({
+            id,
+            typ: document.getElementById('wType_de').value || sk_typ,
+            text: document.getElementById('wText_de').value || sk_text,
+            ikona
+        });
+
+        if (await saveToGitHub(data.content, data.sha, `Varovanie ${code}`)) {
             document.getElementById('warningForm').reset();
             loadAll();
         }
     });
 
-    // FORMULÁR LIMITY
     document.getElementById('limitForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const code = document.getElementById('lCode').value.toUpperCase();
-        showStatus("🚀 Ukladám limity...", "#007bff", "white");
         const data = await getGitHubData();
         if (!data) return;
 
@@ -193,22 +198,22 @@
                 highway: parseInt(document.getElementById('l2_h').value)
             }
         };
-
-        // Ak krajina nemá sekciu varovaní, vytvoríme ju
         if (!data.content[code]) data.content[code] = { sk: [], en: [], de: [] };
 
-        if (await saveToGitHub(data.content, data.sha, `Limity pre ${code}`)) {
-            showStatus("✅ Limity uložené!", "#28a745", "white");
-            loadAll();
-        }
+        await saveToGitHub(data.content, data.sha, `Limity ${code}`);
+        loadAll();
     });
 
-    async function deleteWarning(country, index) {
-        if (!confirm("Zmazať?")) return;
+    async function deleteWarning(code, idx) {
+        if (!confirm("Zmazať varovanie zo všetkých jazykov?")) return;
         const data = await getGitHubData();
         if (!data) return;
-        ["sk", "en", "de"].forEach(l => data.content[country][l].splice(index, 1));
-        await saveToGitHub(data.content, data.sha, `Zmazané varovanie ${country}`);
+
+        data.content[code].sk.splice(idx, 1);
+        data.content[code].en.splice(idx, 1);
+        data.content[code].de.splice(idx, 1);
+
+        await saveToGitHub(data.content, data.sha, `Zmazané ${code}`);
         loadAll();
     }
 
@@ -220,13 +225,14 @@
             headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: msg, content: encoded, sha })
         });
+        if(res.ok) showStatus("✅ Hotovo", "#28a745", "white");
         return res.ok;
     }
 
-    function showStatus(text, bg, color) {
+    function showStatus(t, b, c) {
         const s = document.getElementById('status');
-        s.style.display = "block"; s.textContent = text; s.style.backgroundColor = bg; s.style.color = color;
-        setTimeout(() => s.style.display = "none", 3000);
+        s.style.display="block"; s.textContent=t; s.style.backgroundColor=b; s.style.color=c;
+        setTimeout(()=>s.style.display="none", 2000);
     }
 </script>
 </body>
