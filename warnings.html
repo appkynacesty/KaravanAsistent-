@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Admin - Výstrahy a Limity</title>
+    <style>
+        body { font-family: -apple-system, system-ui, sans-serif; max-width: 900px; margin: 10px auto; padding: 15px; background: #fff5f5; color: #333; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { margin-top: 0; color: #dc3545; font-size: 1.2em; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; }
+        label { font-weight: bold; font-size: 0.85em; display: block; margin-top: 15px; color: #555; }
+        input, select, textarea { width: 100%; margin: 5px 0 10px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
+        .row { display: flex; gap: 10px; }
+        button { padding: 14px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .btn-add { background: #dc3545; color: white; width: 100%; margin-top: 20px; font-size: 1.1em; }
+        .btn-load { background: #6c757d; color: white; margin-bottom: 15px; width: 100%; }
+        .item-row { padding: 12px; border-bottom: 1px solid #eee; position: relative; }
+        .token-area { background: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+        #status { padding: 15px; margin-top: 10px; border-radius: 8px; display: none; text-align: center; font-weight: bold; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; min-width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .country-header { background: #343a40; color: white; padding: 8px 15px; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        .warning-box { border-left: 4px solid #dc3545; background: #fff9f9; padding: 10px; margin: 5px 0; font-size: 0.9em; }
+        .btn-delete { background: #ff4d4d; color: white; border-radius: 5px; padding: 5px 10px; font-size: 0.7em; float: right; }
+    </style>
+</head>
+<body>
+
+<div id="status"></div>
+
+<div class="token-area">
+    <strong>🔑 GitHub Token:</strong>
+    <input type="password" id="ghToken" placeholder="Vložte ghp_..." autocomplete="off">
+</div>
+
+<div class="card">
+    <h2>➕ Pridať Varovanie/Upozornenie</h2>
+    <form id="addForm">
+        <label>Krajina (Kód napr. AT, DE, SK):</label>
+        <input type="text" id="countryCode" placeholder="AT" required maxlength="2" style="text-transform: uppercase;">
+
+        <div class="row">
+            <div style="flex:1">
+                <label>Ikona (Emoji):</label>
+                <input type="text" id="icon" placeholder="🚫" required>
+            </div>
+            <div style="flex:3">
+                <label>Typ (Krátky nadpis SK):</label>
+                <input type="text" id="type_sk" placeholder="Nocovanie" required>
+            </div>
+        </div>
+
+        <label>Text varovania (SK):</label>
+        <textarea id="text_sk" rows="2" placeholder="V Rakúsku je zakázané..." required></textarea>
+
+        <label>Preklady (Voliteľné - ak prázdne, použije sa SK):</label>
+        <input type="text" id="type_en" placeholder="Type (EN)">
+        <input type="text" id="type_de" placeholder="Typ (DE)">
+        <textarea id="text_en" rows="2" placeholder="Text (EN)"></textarea>
+        <textarea id="text_de" rows="2" placeholder="Text (DE)"></textarea>
+
+        <button type="submit" class="btn-add">⚠️ Pridať do krajiny</button>
+    </form>
+</div>
+
+<div class="card">
+    <h2>📋 Aktuálne varovania</h2>
+    <button class="btn-load" onclick="loadWarnings()">🔄 Načítať zoznam</button>
+    <div id="warningList"></div>
+</div>
+
+<script>
+    const GITHUB_USERNAME = 'appkynacesty';
+    const GITHUB_REPO = 'KaravanAsistent';
+    const GITHUB_FILE_PATH = 'caravan_warnings.json';
+
+    const getUrl = () => `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?cb=${Date.now()}`;
+
+    function getToken() { return document.getElementById('ghToken').value.trim() || null; }
+
+    async function getGitHubData() {
+        const token = getToken();
+        if (!token) { alert("Vložte token!"); return null; }
+        try {
+            const res = await fetch(getUrl(), { headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json' } });
+            const data = await res.json();
+            const content = JSON.parse(decodeURIComponent(escape(window.atob(data.content))));
+            return { content, sha: data.sha };
+        } catch (e) { alert("Chyba pri načítaní!"); return null; }
+    }
+
+    async function loadWarnings() {
+        const listDiv = document.getElementById('warningList');
+        listDiv.innerHTML = "⌛ Načítavam...";
+        const data = await getGitHubData();
+        if (!data) { listDiv.innerHTML = ""; return; }
+
+        listDiv.innerHTML = "";
+        // Prechádzame krajiny v objekte (okrem speedLimits a vignetteLinks)
+        Object.keys(data.content).forEach(country => {
+            if (country === "speedLimits" || country === "vignetteLinks") return;
+
+            const countryDiv = document.createElement('div');
+            countryDiv.innerHTML = `<div class="country-header">${country}</div>`;
+            
+            // Zobrazíme slovenské verzie varovaní
+            data.content[country].sk.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'item-row';
+                row.innerHTML = `
+                    <button class="btn-delete" onclick="deleteWarning('${country}', ${index})">Zmazať</button>
+                    <div class="warning-box">
+                        ${item.ikona} <strong>${item.typ}</strong><br>
+                        ${item.text}
+                    </div>
+                `;
+                countryDiv.appendChild(row);
+            });
+            listDiv.appendChild(countryDiv);
+        });
+        showStatus("✅ Dáta načítané", "#d4edda", "#155724");
+    }
+
+    document.getElementById('addForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const country = document.getElementById('countryCode').value.toUpperCase();
+        showStatus("🚀 Zapisujem...", "#007bff", "white");
+        
+        const data = await getGitHubData();
+        if (!data) return;
+
+        // Ak krajina ešte neexistuje, vytvoríme ju
+        if (!data.content[country]) {
+            data.content[country] = { sk: [], en: [], de: [] };
+        }
+
+        const nextId = data.content[country].sk.length + 1;
+        const icon = document.getElementById('icon').value;
+
+        // Pridanie do SK
+        data.content[country].sk.push({
+            id: nextId,
+            typ: document.getElementById('type_sk').value,
+            text: document.getElementById('text_sk').value,
+            ikona: icon
+        });
+
+        // Pridanie do EN
+        data.content[country].en.push({
+            id: nextId,
+            typ: document.getElementById('type_en').value || document.getElementById('type_sk').value,
+            text: document.getElementById('text_en').value || document.getElementById('text_sk').value,
+            ikona: icon
+        });
+
+        // Pridanie do DE
+        data.content[country].de.push({
+            id: nextId,
+            typ: document.getElementById('type_de').value || document.getElementById('type_sk').value,
+            text: document.getElementById('text_de').value || document.getElementById('text_sk').value,
+            ikona: icon
+        });
+
+        if (await saveToGitHub(data.content, data.sha, `Varovanie pre ${country}`)) {
+            showStatus("✅ Uložené!", "#28a745", "white");
+            document.getElementById('addForm').reset();
+            loadWarnings();
+        }
+    });
+
+    async function deleteWarning(country, index) {
+        if (!confirm("Zmazať toto varovanie?")) return;
+        const data = await getGitHubData();
+        if (!data) return;
+
+        data.content[country].sk.splice(index, 1);
+        data.content[country].en.splice(index, 1);
+        data.content[country].de.splice(index, 1);
+
+        if (await saveToGitHub(data.content, data.sha, `Zmazané varovanie ${country}`)) {
+            showStatus("✅ Zmazané", "#28a745", "white");
+            loadWarnings();
+        }
+    }
+
+    async function saveToGitHub(newContent, sha, message) {
+        const token = getToken();
+        const encoded = window.btoa(unescape(encodeURIComponent(JSON.stringify(newContent, null, 2))));
+        const res = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`, {
+            method: 'PUT',
+            headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message, content: encoded, sha })
+        });
+        return res.ok;
+    }
+
+    function showStatus(text, bg, color) {
+        const s = document.getElementById('status');
+        s.style.display = "block"; s.textContent = text; s.style.backgroundColor = bg; s.style.color = color;
+        setTimeout(() => s.style.display = "none", 3000);
+    }
+</script>
+</body>
+  </html>
+  
