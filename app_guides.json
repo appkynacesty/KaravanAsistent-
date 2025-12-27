@@ -10,7 +10,7 @@
     "en": "ACCURACY and PRIVACY",
     "de": "GENAUIGKEIT und PRIVATSPHÄRE"
   },
-  "icon": "⚠️",
+  "icon": "warning",
   "sections": [
     {
       "heading": {
