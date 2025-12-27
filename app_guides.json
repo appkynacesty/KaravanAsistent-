@@ -7,8 +7,8 @@
   "id": "accuracy_warning",
   "title": {
     "sk": "⚠️ PRESNOSŤ A SÚKROMIE",
-    "en": "⚠️ Accuracy and Privacy",
-    "de": "⚠️ Genauigkeit und Privatsphäre"
+    "en": "⚠️ ACCURACY and PRIVACY",
+    "de": "⚠️ GENAUIGKEIT und PRIVATSPHÄRE"
   },
   "icon": "verified_user",
   "sections": [
